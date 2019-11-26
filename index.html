@@ -1,5 +1,10 @@
 <html>
   <script>
-    window.location.href=window.location.href.replace("https://tarenaexit.github.io/xys/?url=","https://newxys.com")
+    curlUrl="https://tarenaexit.github.io/xys/?url=/"
+    targetUrl="https://newxys.com/"
+    if(window.location.href.indexOf(curlUrl) == -1) {
+        curlUrl=curlUrl.substr(0,curlUrl.length-1)
+    }
+    window.location.href=window.location.href.replace(curlUrl,targetUrl)
   </script>
 </html>
